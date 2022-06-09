@@ -1,0 +1,372 @@
+/*=====================
+  General Style
+  =====================*/
+
+  body {
+      margin: 0%;
+  }
+ .white-text {
+     color: aliceblue;
+ }
+
+ /*=======================
+    For Paragraphs elements
+    =====================*/
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: justify;
+        letter-spacing: 2px;
+        font-size: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: rgb(47, 0, 255);
+    }
+     #title-text {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: justify;
+        letter-spacing: 3px;
+        font-size: 38px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    p:hover {
+        transition: transfrom 2s;
+        transform: scale(1.01);
+
+    }
+
+    .middle {
+        text-align: center;
+    }
+    .center:hover {
+        transition: transform 3s;
+        transform: scale(1.03);
+
+    }
+    a {
+        color: rgb(0, 162, 255);
+    }
+    img {
+        border-radius: 8px;
+        max-width: 80%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: center;
+        overflow: hidden;
+        
+
+    }
+    img:hover {
+        filter: grayscale(25%);
+        transition: transform 2s;
+        transform: scale(1.1);
+    }
+    @media screen and (max-width: 576px) {
+        img {
+            height: 100px;
+            margin-top: 150px;
+        }
+    }
+
+    footer {
+        padding: 4%;
+        background-color: antiquewhite;
+        
+    }
+    /*============================
+       End General Style
+    =============================*/
+
+    /*===========================
+     Slide Show 
+     ===========================*/
+/*Slideshow style*/
+#Slideshow_Background {
+    background: rgba(137, 241, 255, 0.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*slideshow container*/
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+/*slideshow images*/
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0,0,0,.75);
+    width: auto;
+}
+
+/*next & previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: honeydew;
+}
+
+/*slideshow text*/
+.text {
+    color: rgb(255, 255, 255);
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.Slide_Number {
+    color: rgb(238, 238, 238);
+    position: absolute;
+    top: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    display: none;
+}
+
+/*the dots under the slideshow*/
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: rgb(223, 223, 223);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/*hover effect for slideshow dots*/
+.active, .dot:hover {
+    background-color: rgb(0, 255, 170);
+}
+
+/*fading animation for slideshow*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+/*========================
+   End Slide Show
+   ====================*/
+
+    /*=========================
+      Navbar style
+    =========================*/
+    .nav {
+        overflow: hidden;
+        background-color: rgb(0, 255, 170);
+        position: fixed;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        z-index: 1;
+        animation: moveNav 2s;
+    }
+    @keyframes moveNav {
+        from {top: -100vw;} 
+        to {left: 0vw;}
+    }
+    /* Navbar links */
+    .nav a {
+        float: left;
+        display: block;
+        color: rgb(0, 0, 0);
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        text-align: center;
+        position: relative;
+        -webkit-animation: moveNavText 2.75s;
+        animation: moveNavText 2.75s;
+    }
+    @keyframes moveNavText {
+        from {top: -100vw;}
+        to {top: 0vw;}
+        }
+        .Navbar a:hover {
+            background-color: #f4f4f4;
+            color: rgb(0, 13, 134); 
+            font-weight: bold;
+        }
+    /*===========================
+      End Navbar style
+    =========================*/
+
+    /*======================
+       Video Style
+    ======================*/
+    #Coding_Video {
+        position: fixed;
+        top: 0;
+        object-fit: fill;
+        min-width: 100%;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 500px;
+    }
+    @media screen and (max-width: 576px) {
+        #Coding_Video {
+            display: none;
+        }
+    }
+    .video_Text {
+        background: rgba(0, 0, 0, 0.8);
+        color: white; 
+        width: 100%;
+        padding: 30px;
+        position: relative;
+        -webkit-animation: moveVideoText 3.75s;
+        animation: moveVideoText 3.75s;
+    }
+    @keyframes moveVideoText {
+        from {top: -100vw;} 
+        to {top: 0vw;}
+    }
+  /*=====================
+    End Video Style
+  ========================*/
+
+  /*====================
+   Table styles
+   ===================*/
+ * {
+     box-sizing: border-box;
+ }
+  .even-columns {
+      display: flex;
+      margin-top: auto;
+
+
+       
+  }
+  .even-columns > * {
+      flex-basis: 100%;
+  } 
+
+
+@media screen and (max-width: 576px) {
+ .column_left {
+     overflow: auto;
+ }
+}
+
+
+
+
+
+ /*=========================
+  End of Table style
+  ==================*/
+
+
+  /*=========================
+    Contact form style
+    ==================*/
+  input[type=text] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #000;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+  }
+  input[type=text]:hover {
+    box-shadow: 0 0 5px #004a4d inset;
+  }  
+
+input[type=submit] {
+    background-color: black; 
+    color: rgb(255, 217, 0); 
+    font-weight: bold; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+input[type=submit]:hover {
+    background-color: white; 
+    color: black; 
+    transform: scale(1.5); 
+    transition: transform 1.5s; 
+}
+
+
+form {
+    border-radius: 5px; 
+    background-color: #f2f2f2; 
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
